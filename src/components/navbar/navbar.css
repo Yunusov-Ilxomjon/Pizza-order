@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.pizza-container {
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    background-color: #f8f9fa; /* Yengil fon rangi */
+    overflow: hidden; /* Pastki qismda bo'sh joylar yo'qoladi */
+}
+
+.pizza-form {
+    width: 28%;
+    padding: 20px; /* Padding qo'shdik */
+    display: flex;
+    flex-direction: column; /* Formani vertikal joylashgan holda saqlash */
+    align-items: flex-start; /* Elementlarni chap tomonga joylashtirish */
+    background-color: #ffffff; /* Oq fon */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Kengaytirilgan soyalar */
+    border-radius: 10px; /* Burchaklarni yumshatish */
+    height: auto; /* Form balandligini avtomatik qoldirish */
+    overflow-y: visible; /* Skrolldan voz kechamiz */
+}
+
+.pizza-order {
+    width: 72%;
+    height: 90vh; /* Balandlik avtomatik */
+    padding: 20px; /* Padding qo'shdik */
+    display: flex;
+    flex-wrap: wrap; /* Kartalarni joylashtirish */
+    justify-content: flex-start; /* Kartalarni chap tomonga joylashtirish */
+    gap: 10px; /* Kartalar orasidagi bo'shliq */
+    overflow-y: auto; /* Kerak bo'lsa skroll bo'lishi uchun */
+    background-color: #ffffff; /* Oq fon */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Kengaytirilgan soyalar */
+    border-radius: 10px; /* Burchaklarni yumshatish */
+}
+
+.pizza-form input,
+select {
+    width: 300px; /* Kenglikni oshirdik */
+    height: 40px; /* Biroz balandlik qo'shdik */
+    margin: 5px 0; /* Yuqoridan va pastdan bo'shliq */
+    padding: 5px; /* Ichki bo'shliq */
+    border: 1px solid #ccc; /* Yengil chegara */
+    border-radius: 5px; /* Burchaklarni yumshatish */
+}
+
+label {
+    margin-bottom: 5px; /* Yuqoridagi va pastdagi bo'shliq */
+}
+
+button {
+    width: 95%; /* Kenglikni oshirdik */
+    height: 45px;
+    margin-top: 20px; /* Yuqoridan bo'shliq */
+    background-color: #28a745; /* Yashil fon */
+    color: white; /* Oq matn */
+    border: none; /* Chegarani olib tashladik */
+    border-radius: 5px; /* Burchaklarni yumshatish */
+    cursor: pointer; /* Ko'rsatgichni o'zgartirish */
+}
+
+.card {
+    width: 250px; /* Kichik o'lchamda qoldirdik */
+    height: 300px; /* Avtomatik balandlik */
+    /* padding: 10px; */
+    border-radius: 8px; /* Burchaklarni yumshatish */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Kengaytirilgan soyalar */
+    background-color: #ffffff; /* Oq fon */
+    display: flex; /* Ichki elementlarni joylashish uchun */
+    flex-direction: column; /* Vertikal joylashuvi */
+}
+
+.card-header {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.card-body {
+    font-size: 16px;
+}
+
+.card-title {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.card-text {
+    margin-bottom: 8px;
+}
+
+.btn-danger {
+    width: 100px;
+    font-size: 14px;
+    padding: 5px;
+    margin-top: 20px;
+    cursor: pointer;
+    display: block; /* Markazlashgan */
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #dc3545; /* Qizil fon */
+    color: white; /* Oq matn */
+    border: none; /* Chegarani olib tashladik */
+    border-radius: 5px; /* Burchaklarni yumshatish */
+}
+
+/* Responsive dizayn uchun media queries */
+@media (max-width: 768px) {
+    .pizza-container {
+        flex-direction: column; /* Mobil qurilmalar uchun vertikal joylashuv */
+    }
+
+    .pizza-form {
+        width: 100%; /* Formani to'liq kenglikda ko'rsatish */
+        height: auto; /* Balandlik avtomatik */
+    }
+
+    .pizza-order {
+        width: 100%; /* Kartalarni to'liq kenglikda ko'rsatish */
+        height: auto; /* Balandlik avtomatik */
+    }
+
+    .card {
+        width: 90%; /* Kartalar kengligini mobilda kengroq qilamiz */
+    }
+}
+
+.alert {
+    margin-top: 10px; /* O'zgarishlar bilan joylashuvni boshqarish */
+    width: 95%; /* Xabar kengligini tugmaga mos qilish uchun */
+    text-align: center; /* Matnni markazlashtirish */
+}
